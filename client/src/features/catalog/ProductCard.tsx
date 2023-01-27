@@ -22,7 +22,8 @@ export default function ProductCard({ product }: Props) {
             <CardMedia
                 sx={{ height: 140, backgroundSize: 'contain', bgcolor: 'primary.light' }}
                 image={product.pictureUrl}
-                title={product.name} />
+                title={product.name} 
+            />
             <CardContent>
                 <Typography gutterBottom color='secondary' variant="h5">
                     ${(product.price / 100).toFixed(2)}
