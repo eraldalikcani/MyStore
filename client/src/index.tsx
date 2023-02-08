@@ -4,7 +4,8 @@ import './app/layout/styles.css';
 import App from './app/layout/App';
 import reportWebVitals from './reportWebVitals';
 import { Router } from 'react-router-dom';
-import {createBrowserHistory} from 'history';
+import { createBrowserHistory } from 'history';
+import { StoreProvider } from './app/context/StoreContext';
 
 export const history = createBrowserHistory();
 
@@ -13,9 +14,11 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   <Router history={history}>
-  <React.StrictMode>
-      <App />
-  </React.StrictMode>
+    <React.StrictMode>
+      <StoreProvider>
+        <App />
+      </StoreProvider>
+    </React.StrictMode>
   </Router>
 );
 
